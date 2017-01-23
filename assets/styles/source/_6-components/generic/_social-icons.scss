@@ -1,28 +1,4 @@
 /*-- 6. Components >> Social icons
 ========================================================================== --*/
 .c-social-icons{
-    &__item{
-        display: inline;
-
-        &:first-child a{
-            padding-left: 0;
-        }
-
-        a{
-            display: inline-block;
-            @include padding(calculateRem(10px), top);
-            @include padding(calculateRem(50px), left);
-
-            svg path{
-                @include transition(fill 0.2s);
-            } 
-
-            &:hover{
-                color: $secondary-colour;
-                svg path{
-                    fill: $secondary-colour;
-                }
-            }
-        }
-    }
 }
