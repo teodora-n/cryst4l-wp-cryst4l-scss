@@ -1,0 +1,43 @@
+/*-- 4. Base >> Base
+========================================================================== --*/
+*, *:after, *:before {
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	@include box-sizing;
+	-webkit-overflow-scrolling:touch;
+	-webkit-backface-visibility: hidden;
+}
+html {
+	width:100%;
+	overflow-x:hidden;
+    min-height:100%;        
+    &.touch {
+        cursor: pointer;
+    } 
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+    font-size: $base-font-size;
+	font-weight: 400;
+	background-color: $primary-colour;
+    color: $base-text-colour;
+    line-height: $base-line-height;
+    font-family: $primary-font;
+	&.no-overflow{
+		@include no-overflow();
+	}
+}
+img {
+	@include max-width(100%);
+	vertical-align: bottom;
+	border: none;
+	height: auto;
+}
+svg{
+	@include max-width(100%);
+}
+hr {
+    border: none;
+    @include border(1px solid $base-border-colour, bottom);
+}

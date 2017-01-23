@@ -1,0 +1,28 @@
+/*-- 6. Components >> Misc
+========================================================================== --*/
+.toggle-lists{
+    cursor: pointer;
+}
+.lists{
+    .toggle{
+        display: none;
+    }
+    &.shown{
+        .toggle{
+            display: block;
+        }
+    }
+}
+@include xs-up(){
+    .lists .toggle{
+        display: inline-block;
+    }
+}
+
+//CTA form
+@include sl-down(){
+    #cta-form{
+        background: #fff;
+        z-index: 99999;
+    }
+}

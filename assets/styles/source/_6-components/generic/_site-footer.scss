@@ -1,0 +1,38 @@
+/*-- 6. Components >> Site footer
+========================================================================== --*/
+.c-site-footer{
+    @include padding($spacing-unit * 2.5, top, bottom);
+
+    > *:first-child{
+        @include padding(0, top);
+        @include margin(0, top);
+    }
+
+    > *:last-child{
+        @include padding(0, bottom);
+        @include margin(0, bottom);
+    }
+    .logo path{
+        fill: $secondary-colour;
+    }
+    .logo__text{
+        display: block;
+    }
+}
+
+@include sl-down(){
+    .c-site-footer{
+        padding-top: $spacing-unit;
+        padding-bottom: calculateRem(105px);
+
+        *{
+            text-align: center;
+        }
+
+        @at-root #{&}__copyrights{
+            margin-bottom: calculateRem(10px);
+            padding-bottom: $spacing-unit;
+            border-bottom: 1px solid rgba(#fff, 0.1);
+        }
+    }
+}

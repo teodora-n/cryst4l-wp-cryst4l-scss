@@ -1,0 +1,23 @@
+/*-- 5. Objects >> Site wrap
+========================================================================== --*/
+.o-site-wrap{
+	@include max-width(100%);
+	@include max-width(100vw);
+	overflow-x:hidden;
+	background-color: #fff;
+
+	//Hide everything until all css and js load
+	//opacity:0;
+	//visibility: hidden;
+	//@include transition(opacity, 2s);
+	
+	.no-js &{
+		opacity:1;
+		visibility: visible;
+	}
+
+	&.loaded{
+		opacity:1;
+		visibility: visible;
+	}
+}

@@ -1,0 +1,48 @@
+/*-- 6. Components >> Forms
+========================================================================== --*/
+.c-form{
+    label{
+        color: $dark;
+        @include font-size-rem(16px);
+        margin-bottom: calculateRem(8px);
+    }
+    button, input[type="button"], input[type="submit"]{
+        width:100%;
+    }
+    &__field{
+        &.js-error{
+            border-color:red;
+        }
+    }
+    &__error{
+        visibility:hidden;
+        opacity:0;
+        @include position(absolute, 2.8em, 1em, auto, auto);
+        @include transition(all, 0.3s);
+        color:red;
+        @include font-size-rem(13px);
+
+        &.shown{
+            visibility:visible;
+            opacity:1;
+        }
+    }
+}
+.asterisk{
+    color: $primary-colour;
+    font-size: 20px;
+    line-height: 0;
+}
+.ajax-loader{
+    display:none;
+    margin: $spacing-unit auto 0 auto;
+}
+.ajax-loader.shown{
+    display: block;
+}
+
+@include sm-down(){
+    .cta-form h3{
+        font-size:calculateRem(36px);
+    }
+}

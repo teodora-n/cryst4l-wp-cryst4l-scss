@@ -1,0 +1,36 @@
+/*-- 6. Components >> Intro
+========================================================================== --*/
+.c-intro__title{
+	@include position(relative);
+	padding-top: 0.4em;
+	@include font-size-rem(45px);
+	line-height: 1.3;
+}
+.title__sup{
+	@include position(absolute, 0, auto, auto, 0);
+}
+
+@include lg-up(){
+	.c-intro{
+		&:before{
+			content:'';
+			position:absolute;
+			left:50%;
+			top:0;
+			width:1px;
+			height: 100%;
+			border-left:1px solid $base-border-colour;
+		}
+	}
+
+	.title{
+		@include font-size-rem(80px);
+		line-height: 1;
+	}
+}
+
+@include sm-down(){
+	.c-intro__title{
+		@include font-size-rem(36px);
+	}
+}

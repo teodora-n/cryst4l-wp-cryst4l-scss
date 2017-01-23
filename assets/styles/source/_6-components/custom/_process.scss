@@ -1,0 +1,93 @@
+/*-- 6. Components >> Custom >> Process
+========================================================================== --*/
+.c-process__title{
+    line-height:1;
+    @include margin($spacing-unit * 5, bottom);
+    span{
+        display:block;
+        @include font-size-rem(110px);
+    }
+}
+.c-process__step{
+    position: relative;
+
+    @at-root #{&}__content{
+        @include position(relative);
+        z-index:2;
+        border:1px solid $base-border-colour;
+        padding: 1em;
+        background-color: #fff;
+        color: $dark;
+
+        .c-process__step--36 &{
+            background: $primary-colour;
+            border-color: $primary-colour;
+            color:#fff;
+        }
+    }
+
+    svg, img{
+        @include margin(1.5em, top);
+        @include margin(1em, bottom);
+    }
+}
+.process-line{
+    @include position(absolute, $spacing-unit * 5.5, auto, auto, $spacing-unit * 1);
+    z-index:1;
+
+    &__solid{
+        stroke-dasharray: 3641;
+        stroke-dashoffset: -3641;
+    }
+
+    &__dashed{
+        stroke-dasharray: 10;
+    }
+}
+
+@include lg-up(){
+    .c-process__step{
+        &.row1{
+            .inner{
+                @include padding(30%, right);
+                @include padding(20%, bottom);
+            }
+        }
+        &.row2{
+            .inner{
+                @include padding(30%, left);
+            }
+        }
+
+        @at-root #{&}__content{
+            &--even{
+                @include margin($spacing-unit * 2, top);
+            }
+            min-height: 0;
+            height: auto;
+        }
+    }
+}
+
+@include lg-down{
+    .process-line{
+        display: none;
+    }
+    .c-process__step__content{
+        min-height: 315px;
+    }
+}
+
+@include sm-down(){
+    .c-process h3{
+        span{
+            font-size: 1em;
+            display: inline;
+        }
+        font-size:calculateRem(36px);
+        margin-bottom: 3rem;
+    }
+    .c-process__step__content{
+        text-align: center;
+    }
+}

@@ -1,0 +1,46 @@
+/*-- 6. Components >> Custom >> Screenshots
+========================================================================== --*/
+.c-screenshots{
+    @include padding(1px, top, bottom);
+
+    @at-root #{&}__item{
+        @include margin($spacing-unit * 3, top, bottom);
+    }
+
+    @at-root #{&}__title{
+        @include font-size-rem(24px);
+        margin-bottom:0;
+    }
+
+    @at-root #{&}__subtitle{
+        margin-top:0.2em;
+        padding-bottom: 0.7em;
+    }
+
+    @at-root #{&}__snippet{
+        @include margin($spacing-unit * 2, bottom);
+    }
+
+    @at-root #{&}__content{
+
+    }
+
+    @at-root #{&}__image{
+
+    }
+}
+
+@include lg-up(){
+    .c-screenshots{
+        @include padding($spacing-unit * 5, top);
+        @include padding($spacing-unit, bottom);
+
+        @at-root #{&}__item{
+            @include margin($spacing-unit * 9, top);
+            @include margin($spacing-unit * 5, bottom);
+        }
+        @at-root #{&}__snippet{
+            @include margin($spacing-unit * 4, bottom);
+        }
+    }
+}

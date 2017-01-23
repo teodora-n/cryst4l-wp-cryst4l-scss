@@ -1,0 +1,43 @@
+/*-- 6. Components >> Custom >> Decorative Letters
+========================================================================== --*/
+@include md-up{
+    .c-letters{
+        &--design-thinking{
+            background: url(/wp-content/themes/go/assets/images/svg/design-thinking.svg) no-repeat right 80px fixed;
+            background-size: auto 85%;
+        }
+
+        &--output{
+            background: url(/wp-content/themes/go/assets/images/svg/quality-output.svg) no-repeat left center fixed;
+            background-size: auto 72%;
+        } 
+
+        &--why{
+            background: url(/wp-content/themes/go/assets/images/svg/why.svg) no-repeat center 120px fixed;
+            background-size: 90% auto;
+        } 
+
+        &--how-it-works{
+            background: url(/wp-content/themes/go/assets/images/svg/how-it-works.svg) no-repeat center 100px fixed;
+            background-size: 90% auto;
+        } 
+    }
+
+    .touch .c-letters{
+        background-attachment: scroll;
+
+        &--design-thinking{
+            background-position: 100% -30px;
+            background-size: auto calc(100% + 60px);
+        }
+
+        &--output{
+            background-size: auto calc(100% + 60px);
+            background-position: -30px -30px;
+        }
+
+         &--why, &--how-it-works{
+            background-position: center -40px;
+        } 
+    }
+}

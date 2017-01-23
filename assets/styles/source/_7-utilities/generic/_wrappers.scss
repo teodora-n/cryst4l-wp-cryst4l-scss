@@ -1,0 +1,10 @@
+/*-- 7. Utilities >> Generic >> Wrappers
+========================================================================== --*/
+@if ($use-wrapping-classes) {
+	.u-wrapper{
+		@include position(relative);
+		@include center-horizontally();
+		width:90%;
+	}
+	@include wrapping-classes('u-wrapper', $width-lg, $width-md, $width-sm, $width-sl, $width-xs, $width-xt); 
+} //endif

@@ -1,0 +1,93 @@
+/**
+ * xt
+ */
+ 
+@mixin xt-up {
+    @media screen and ( min-width: calculateEm($xt+1)) {
+        @content;
+    }
+}
+@mixin xt-down {
+    @media screen and ( max-width: calculateEm($xt)) {
+        @content;
+    }
+}
+
+
+/**
+ * xs
+ */
+
+@mixin xs-up {
+	@media screen and ( min-width: calculateEm($xs+1)) {
+		@content;
+	}
+}
+@mixin xs-down {
+	@media screen and ( max-width: calculateEm($xs)) {
+		@content;
+	}
+}
+
+
+/**
+ * sm
+ */
+
+@mixin sm-up {
+	@media screen and ( min-width: calculateEm($sm+1)) {
+		@content;
+	}
+}
+@mixin sm-down {
+	@media screen and ( max-width: calculateEm($sm)) {
+		@content;
+	}
+}
+
+/**
+ * sl
+ */
+
+@mixin sl-up {
+	@media screen and ( min-width: calculateEm($sl+1)) {
+		@content;
+	}
+}
+@mixin sl-down {
+	@media screen and ( max-width: calculateEm($sl)) {
+		@content;
+	}
+}
+
+
+/**
+ * md
+ */
+
+@mixin md-up {
+	@media screen and ( min-width: calculateEm($md+1)) {
+		@content;
+	}
+}
+@mixin md-down {
+	@media screen and ( max-width: calculateEm($md)) {
+		@content;
+	}
+}
+
+
+/**
+ * lg
+ */
+
+@mixin lg-up {
+	@media screen and ( min-width: calculateEm($lg+1)) {
+		@content;
+	}
+}
+@mixin lg-down {
+	@media screen and ( max-width: calculateEm($lg)) {
+		@content;
+	}
+}
